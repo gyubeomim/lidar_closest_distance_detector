@@ -2,12 +2,13 @@
 
 This module can calculate the closest distance to the nearest obstacle using Convex Polygon of Lidar Point Cloud. 
 
-It's completely working on ROS.
+It's completely working on ROS kinetic, Ubuntu 16.04.
 
 <img src="./pictures/pic.png" alt="drawing" width="600"/>
 
 ## Instruction 
 
+0. install ros-kinetic.
 1. clone this repository.
 2. move it to your `catkin_ws` or custom workspace.
 3. build repository.
