@@ -1,6 +1,6 @@
 # Lidar Closest Distance Detector(LCDD) ROS package.
 
-This module can calculate the closest distance using Convex Polygon of Lidar Point Cloud. 
+This module can calculate the closest distance to the nearest obstacle using Convex Polygon of Lidar Point Cloud. 
 
 It's completely working on ROS.
 
