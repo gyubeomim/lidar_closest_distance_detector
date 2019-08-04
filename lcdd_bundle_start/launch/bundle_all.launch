@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find lcdd_bundle_start)/launch/bundle_robot_space_ring.launch" />
+  <include file="$(find lcdd_bundle_start)/launch/bundle_lidar_loam.launch" />
+</launch>

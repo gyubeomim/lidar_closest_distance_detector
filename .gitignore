@@ -1,0 +1,17 @@
+build/
+devel/
+data/
+summaries/
+
+GPATH
+GSYMS
+GTAGS
+GRTAGS
+TAGS
+
+*.pyc
+*.zip
+*.bag
+*.npy
+
+.vscode

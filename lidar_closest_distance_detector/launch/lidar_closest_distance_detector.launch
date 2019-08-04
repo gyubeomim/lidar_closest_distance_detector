@@ -1,0 +1,35 @@
+<launch>
+  <arg name="nodelet_manager" default="lcdd_nodelet_manager" /> 
+  <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager)" args="manager" output="screen"/>
+  
+  <node pkg="nodelet" type="nodelet" name="registration_nodelet" args="load dyrosvehicle/RegistrationNodelet $(arg nodelet_manager)" output="screen" >
+    <!-- spacefilter_callback() -->
+    <param name="spacefilter_lower_limit" value="-1.0" />
+    <param name="spacefilter_upper_limit" value="1.0" />
+    <param name="spacefilter_voxel_leaf_size" value="0.2" />
+  </node>
+  
+  <node pkg="nodelet" type="nodelet" name="filtering_nodelet" args="load dyrosvehicle/FilteringNodelet $(arg nodelet_manager)" output="screen" >
+    <!-- points_obstacle_callback() -->
+    <param name="obstacle_outrem_radius" value="3.0" />
+    <param name="obstacle_outrem_minneighbors" value="10" />
+  </node>
+  
+  <node pkg="nodelet" type="nodelet" name="segmentation_nodelet" args="load dyrosvehicle/SegmentationNodelet $(arg nodelet_manager)" output="screen" >
+    <!-- points_obstacle_filtered_callback() -->
+    <param name="obstacle_euclidean_tolerance" value="0.25" />
+    <param name="obstacle_euclidean_min_cluster" value="50" />
+    <param name="obstacle_euclidean_max_cluster" value="10000" />
+    <param name="obstacle_voxel_leaf_size" value="0.2" />
+  </node>
+
+  <node pkg="lidar_closest_distance_detector" type="convex_polygon_nodelet" name="convex_polygon_nodelet" output="screen" >
+    <!-- publishAllConvexPolygon() -->
+    <param name="obstacle_euclidean_tolerance" value="0.18" />
+    <param name="obstacle_euclidean_min_cluster" value="50" />
+    <param name="obstacle_euclidean_max_cluster" value="10000" />
+  </node>
+  
+  <node pkg="nodelet" type="nodelet" name="distance_detector_nodelet" args="load dyrosvehicle/DistanceDetectorNodelet $(arg nodelet_manager)" output="screen" >
+  </node>
+</launch>

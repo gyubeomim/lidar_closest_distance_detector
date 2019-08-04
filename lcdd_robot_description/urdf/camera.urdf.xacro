@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 0.7 -->
+<robot name="dyrosvehicle" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="camera">
+    <visual name="dyrosvehicle">
+      <origin xyz="-0.15 0.1 -1.7" rpy="0 0 0"/>
+      <geometry>
+	<mesh filename="package://lcdd_robot_description/meshes/dyrosvehicle/dyrosvehicle.dae" scale="3.2 2.8 3.0" />
+      </geometry>
+    </visual>
+  </link>
+</robot>

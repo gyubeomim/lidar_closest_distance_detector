@@ -1,0 +1,4 @@
+<launch>
+   <include file="$(find lidar_closest_distance_detector)/launch/lidar_closest_distance_detector.launch" />
+   <include file="$(find lcdd_loam)/launch/lcdd_loam.launch" />
+</launch>
