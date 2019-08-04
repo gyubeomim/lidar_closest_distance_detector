@@ -23,9 +23,9 @@ ${catkin_INCLUDE_DIRS}
 ${OpenCV_INCLUDE_DIRS}
 )
 
-add_executable(ring_noise_remover_node src/ring_noise_remover_node.cpp)
+add_executable(lcdd_ring_noise_remover_node src/ring_noise_remover_node.cpp)
 
-target_link_libraries(ring_noise_remover_node
+target_link_libraries(lcdd_ring_noise_remover_node
                       ${catkin_LIBRARIES}
                       ${OpenCV_LIBRARIES}
                      )

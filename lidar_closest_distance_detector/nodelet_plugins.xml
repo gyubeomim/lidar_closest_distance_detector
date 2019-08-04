@@ -1,4 +1,4 @@
-<library path="lib/libregistration_nodelet">
+<library path="lib/liblcdd_registration_nodelet">
   <class name="dyrosvehicle/RegistrationNodelet"
          type="dyrosvehicle::RegistrationNodelet"
          base_class_type="nodelet::Nodelet" />
@@ -6,7 +6,7 @@
   </description>
 </library>
 
-<library path="lib/libsegmentation_nodelet">
+<library path="lib/liblcdd_segmentation_nodelet">
   <class name="dyrosvehicle/SegmentationNodelet"
          type="dyrosvehicle::SegmentationNodelet"
          base_class_type="nodelet::Nodelet" />
@@ -14,7 +14,7 @@
   </description>
 </library>
 
-<library path="lib/libfiltering_nodelet">
+<library path="lib/liblcdd_filtering_nodelet">
   <class name="dyrosvehicle/FilteringNodelet"
          type="dyrosvehicle::FilteringNodelet"
          base_class_type="nodelet::Nodelet" />
@@ -22,7 +22,7 @@
   </description>
 </library>
 
-<library path="lib/libdistance_detector_nodelet">
+<library path="lib/liblcdd_distance_detector_nodelet">
   <class name="dyrosvehicle/DistanceDetectorNodelet"
          type="dyrosvehicle::DistanceDetectorNodelet"
          base_class_type="nodelet::Nodelet" />

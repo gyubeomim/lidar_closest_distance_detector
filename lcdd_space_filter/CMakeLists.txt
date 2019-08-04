@@ -39,9 +39,9 @@ SET(CMAKE_CXX_FLAGS "-O2 -g -Wall ${CMAKE_CXX_FLAGS}")
 
 link_directories(${PCL_LIBRARY_DIRS})
 
-add_executable(space_filter_node src/space_filter.cpp)
-target_link_libraries(space_filter_node
+add_executable(lcdd_space_filter_node src/space_filter.cpp)
+target_link_libraries(lcdd_space_filter_node
         ${catkin_LIBRARIES}
         ${PCL_LIBRARIES}
         )
-add_dependencies(space_filter_node ${catkin_EXPORTED_TARGETS})
+add_dependencies(lcdd_space_filter_node ${catkin_EXPORTED_TARGETS})

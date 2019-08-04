@@ -23,7 +23,7 @@
     <param name="obstacle_voxel_leaf_size" value="0.2" />
   </node>
 
-  <node pkg="lidar_closest_distance_detector" type="convex_polygon_nodelet" name="convex_polygon_nodelet" output="screen" >
+  <node pkg="lidar_closest_distance_detector" type="lcdd_convex_polygon_nodelet" name="lcdd_convex_polygon_nodelet" output="screen" >
     <!-- publishAllConvexPolygon() -->
     <param name="obstacle_euclidean_tolerance" value="0.18" />
     <param name="obstacle_euclidean_min_cluster" value="50" />

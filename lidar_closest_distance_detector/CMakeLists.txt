@@ -32,52 +32,52 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   )
 
-add_executable(convex_polygon_nodelet
+add_executable(lcdd_convex_polygon_nodelet
   src/convex_polygon.cpp
   src/convex_polygon_node.cpp
   )
-add_dependencies(convex_polygon_nodelet ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(convex_polygon_nodelet
+add_dependencies(lcdd_convex_polygon_nodelet ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(lcdd_convex_polygon_nodelet
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   )
 
 # nodelets
-add_library(registration_nodelet
+add_library(lcdd_registration_nodelet
   src/registration.cpp
   )
-add_dependencies(registration_nodelet
+add_dependencies(lcdd_registration_nodelet
   ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(registration_nodelet
+target_link_libraries(lcdd_registration_nodelet
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   )
 
-add_library(segmentation_nodelet
+add_library(lcdd_segmentation_nodelet
   src/segmentation.cpp
   )
-add_dependencies(segmentation_nodelet
+add_dependencies(lcdd_segmentation_nodelet
   ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(segmentation_nodelet
+target_link_libraries(lcdd_segmentation_nodelet
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   )
 
-add_library(filtering_nodelet
+add_library(lcdd_filtering_nodelet
   src/filtering.cpp
   )
-add_dependencies(filtering_nodelet
+add_dependencies(lcdd_filtering_nodelet
   ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(filtering_nodelet
+target_link_libraries(lcdd_filtering_nodelet
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   )
 
-add_library(distance_detector_nodelet
+add_library(lcdd_distance_detector_nodelet
   src/distance_detector.cpp
   )
-add_dependencies(distance_detector_nodelet ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(distance_detector_nodelet
+add_dependencies(lcdd_distance_detector_nodelet ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(lcdd_distance_detector_nodelet
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   )
