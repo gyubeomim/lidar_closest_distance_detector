@@ -1,5 +1,6 @@
-# Lidar Closest Distance Detector (a.k.a LCDD)
+# Lidar Closest Distance Detector (a.k.a LCDD) ROS package.
 
+It's completely working on ROS!
 
 ## Instruction 
 
