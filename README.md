@@ -4,6 +4,8 @@ This module can calculate the closest distance to the nearest obstacle using Con
 
 It's completely working on ROS kinetic, Ubuntu 16.04.
 
+Youtube is available here. https://youtu.be/TkKlLtUDQE0
+
 <img src="./pictures/pic.png" alt="drawing" width="600"/>
 
 ## Instruction 
