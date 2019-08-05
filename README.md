@@ -4,6 +4,8 @@ This module can calculate the closest distance to the nearest obstacle using Con
 
 LOAM velodyne is used for generating vehicle's odometry. (https://github.com/laboshinl/loam_velodyne)
 
+space filter which is used for ground removal filter is from Autoware packages (https://gitlab.com/autowarefoundation/autoware.ai)
+
 It's completely working on ROS kinetic, Ubuntu 16.04.
 
 Youtube is available here. https://youtu.be/TkKlLtUDQE0
