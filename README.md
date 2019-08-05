@@ -2,6 +2,8 @@
 
 This module can calculate the closest distance to the nearest obstacle using Convex Polygon of Lidar Point Cloud. 
 
+LOAM velodyne is used for generating vehicle's odometry. (https://github.com/laboshinl/loam_velodyne)
+
 It's completely working on ROS kinetic, Ubuntu 16.04.
 
 Youtube is available here. https://youtu.be/TkKlLtUDQE0
