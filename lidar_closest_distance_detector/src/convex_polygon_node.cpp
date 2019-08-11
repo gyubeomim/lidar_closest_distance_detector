@@ -14,10 +14,5 @@ int main(int argc, char **argv) {
   spinner.start();
   ros::waitForShutdown();
 
-  /* ros::MultiThreadedSpinner spinner(4); // Use 4 threads */
-  /* spinner.spin(); // spin() will not return until the node has been shutdown */
-
-  // ros::spin();
-
   return 0;
 }
