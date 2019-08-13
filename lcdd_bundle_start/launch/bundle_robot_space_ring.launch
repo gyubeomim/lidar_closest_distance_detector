@@ -1,7 +1,5 @@
 <launch>
   <include file="$(find lcdd_robot_description)/launch/robot_description_camera.launch" />
   
-  <node pkg="lcdd_ring_noise_remover" type="lcdd_ring_noise_remover_node" name="lcdd_ring_noise_remover_node" output="screen" />
-  
   <node pkg="lcdd_space_filter" type="lcdd_space_filter_node" name="lcdd_space_filter_node" output="screen" />      
 </launch>

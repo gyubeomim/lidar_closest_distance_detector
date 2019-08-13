@@ -5,5 +5,4 @@ then
 else
 	git commit -m "$1"
 fi
-git push origin master
-
+git push origin vrep

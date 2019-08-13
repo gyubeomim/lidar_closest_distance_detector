@@ -49,7 +49,7 @@ class SpaceFilter {
 
 SpaceFilter::SpaceFilter() :node_handle_("~") {
   // COMMENT(edward): code modified
-  node_handle_.param<std::string>("subscribe_topic",  subscribe_topic_,  "/velodyne_points_modified");
+  node_handle_.param<std::string>("subscribe_topic",  subscribe_topic_,  "/velodyne_points");
   /* node_handle_.param<std::string>("subscribe_topic",  subscribe_topic_,  "/points_raw"); */
 
   node_handle_.param("lateral_removal",  lateral_removal_,  true);

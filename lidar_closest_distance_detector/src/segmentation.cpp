@@ -39,7 +39,7 @@ void SegmentationNodelet::points_obstacle_filtered_callback(const VPointCloud::C
   }
 
   try {
-    listener->lookupTransform("odom", "camera", ros::Time(0), *transform_);
+    listener->lookupTransform("camera_init", "camera", ros::Time(0), *transform_);
   }
   catch (tf::TransformException ex) {
     ROS_WARN("%s", ex.what());

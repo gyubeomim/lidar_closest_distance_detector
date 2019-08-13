@@ -1,4 +1,5 @@
 <launch>
   <include file="$(find lcdd_bundle_start)/launch/bundle_robot_space_ring.launch" />
-  <include file="$(find lcdd_bundle_start)/launch/bundle_lidar_loam.launch" />
+  <include file="$(find lcdd_bundle_start)/launch/bundle_lidar.launch" />
+  <node pkg="rviz" type="rviz" name="lcdd_rviz" args="-d $(find lcdd_bundle_start)/rviz/lcdd.rviz" />
 </launch>

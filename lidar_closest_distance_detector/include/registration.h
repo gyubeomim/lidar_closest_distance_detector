@@ -84,12 +84,10 @@ class RegistrationNodelet : public nodelet::Nodelet {
 
   tf::StampedTransform tf_globalvariable;
 
-  ros::Publisher pub_velodyne;
   ros::Publisher processed_pub;
   ros::Publisher processed_pub2;
   ros::Publisher pub_obstacle;
   ros::Publisher pub_obstacle_registered;
-  ros::Subscriber sub_velodyne;
   ros::Subscriber sub_spacefilter;
   ros::Subscriber sub_obstacle_filtered;
   ros::Subscriber sub_loam_toggle;
@@ -114,7 +112,6 @@ class RegistrationNodelet : public nodelet::Nodelet {
 
   void spacefilter_callback(const VPointCloud::ConstPtr &msg,
                             ros::NodeHandle priv_nh);
-  void velodyne_callback(const VPointCloud::ConstPtr &scan);
   void loam_toggle_callback(const std_msgs::Bool::ConstPtr &msg);
 };
 
