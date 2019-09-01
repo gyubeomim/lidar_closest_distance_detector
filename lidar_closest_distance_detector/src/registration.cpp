@@ -57,10 +57,19 @@ void RegistrationNodelet::spacefilter_callback(const VPointCloud::ConstPtr &msg,
 
   if(msg->points.empty()) return;
 
+  double lower = priv_nh.param<double>("spacefilter_lower_limit", -1);
+  double upper = priv_nh.param<double>("spacefilter_upper_limit", -1);
   double voxel_leaf = priv_nh.param<double>("spacefilter_voxel_leaf_size", 0.2);
 
+  pcl::PassThrough<VPoint> ptfilter(true);
+  ptfilter.setInputCloud (msg);
+  ptfilter.setFilterFieldName ("x");
+  ptfilter.setFilterLimits (lower, upper);
+  ptfilter.setNegative (false);
+  ptfilter.filter (*msg_ptfiltered);
+
   pcl::VoxelGrid<VPoint> vg;
-  vg.setInputCloud(msg);
+  vg.setInputCloud(msg_ptfiltered);
   vg.setLeafSize(voxel_leaf, voxel_leaf, voxel_leaf);
   vg.filter(*msg_vg);
 

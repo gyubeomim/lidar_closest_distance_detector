@@ -4,6 +4,8 @@
   
   <node pkg="nodelet" type="nodelet" name="registration_nodelet" args="load dyrosvehicle/RegistrationNodelet $(arg nodelet_manager)" output="screen" >
     <!-- spacefilter_callback() -->
+    <param name="spacefilter_lower_limit" value="-10.0" />
+    <param name="spacefilter_upper_limit" value="10.0" />
     <param name="spacefilter_voxel_leaf_size" value="0.2" />
   </node>
   
