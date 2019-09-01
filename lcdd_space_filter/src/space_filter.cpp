@@ -111,28 +111,10 @@ void SpaceFilter::VelodyneCallback(const sensor_msgs::PointCloud2::Ptr& in_senso
 
   pcl::fromROSMsg(*in_sensor_cloud_ptr, *current_sensor_cloud_ptr);
 
-  // comment(edward): add passthrough filtering for V-Rep pointcloud
-  PointCloud::Ptr cloud_filtered(new PointCloud);
-  PointCloud::Ptr cloud_out (new PointCloud);
-
-  pcl::PassThrough<Point> ptfilter(true);
-  ptfilter.setInputCloud (current_sensor_cloud_ptr);
-  ptfilter.setFilterFieldName ("x");
-  ptfilter.setFilterLimits (-20,20);
-  ptfilter.setNegative (false);
-  ptfilter.filter (*cloud_filtered);
-
-  ptfilter.setInputCloud(cloud_filtered);
-  ptfilter.setFilterFieldName ("y");
-  ptfilter.setFilterLimits (-20,20);
-  ptfilter.setNegative (false);
-  ptfilter.filter (*cloud_out);
-
-
   if (lateral_removal_)
-    KeepLanes(cloud_out, inlanes_cloud_ptr, left_distance_, right_distance_);
+    KeepLanes(current_sensor_cloud_ptr, inlanes_cloud_ptr, left_distance_, right_distance_);
   else
-    inlanes_cloud_ptr = cloud_out;
+    inlanes_cloud_ptr = current_sensor_cloud_ptr;
 
   if (vertical_removal_)
     ClipCloud(inlanes_cloud_ptr, clipped_cloud_ptr, below_distance_, above_distance_);
