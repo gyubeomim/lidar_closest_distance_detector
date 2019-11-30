@@ -8,7 +8,7 @@ Panels:
         - /odom1/Covariance1/Position1
         - /odom1/Covariance1/Orientation1
       Splitter Ratio: 0.779069781
-    Tree Height: 747
+    Tree Height: 359
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -381,7 +381,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: 6.25500059
+      Angle: 9.41000366
       Class: rviz/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
@@ -391,11 +391,11 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Scale: 13.951395
+      Scale: 18.229517
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz)
-      X: 28.6208191
-      Y: -16.2507954
+      X: 57.9118805
+      Y: -8.77873993
     Saved:
       - Class: rviz/XYOrbit
         Distance: 148.177521
